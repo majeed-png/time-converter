@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 0 15px; /* لتجنب تداخل المحتوى مع حواف الشاشة على الهواتف */
 }
 
 /* الهيدر وقائمة التنقل */
@@ -29,19 +30,20 @@ header {
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: baseline; /* رفع النص */
+  align-items: baseline;
   list-style: none;
   padding: 10px;
+  flex-wrap: wrap; /* السماح بتوزيع العناصر على عدة أسطر في الشاشات الصغيرة */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 5px 15px; /* مسافات أقل لدعم الشاشات الصغيرة */
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 nav ul li a:hover {
@@ -50,13 +52,13 @@ nav ul li a:hover {
 
 /* العنوان الرئيسي */
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -69,17 +71,19 @@ p {
 }
 
 input {
-  width: 300px;
+  width: 90%; /* استخدام نسبة مئوية لتكون متجاوبة على جميع الأجهزة */
+  max-width: 400px; /* أقصى عرض على الشاشات الكبيرة */
   padding: 10px;
   border: none;
   border-radius: 5px;
   margin-bottom: 15px;
   font-size: 16px;
-  text-align: center; /* توسيط النص داخل الحقل */
+  text-align: center;
 }
 
 button {
-  width: 150px;
+  width: 60%; /* نفس الفكرة هنا */
+  max-width: 200px;
   padding: 10px;
   background-color: #28a745;
   color: white;
@@ -95,61 +99,49 @@ button:hover {
 
 /* إعدادات الصور */
 nav ul li a img {
-  width: 32px; /* تقليص حجم الصور */
-  height: 32px;
-  vertical-align: middle; /* محاذاة الصور مع النص */
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 /* إعداد Flexbox للحاوية الرئيسية */
 .result-container {
   display: flex;
-  justify-content: center;  /* محاذاة أفقيًا */
-  align-items: center;  /* محاذاة عموديًا */
-  width: 100%;  /* تأكيد أن الحاوية تأخذ العرض بالكامل */
-  margin-top: 20px;  /* مسافة بين حقل النص والنتيجة */
-  height: 100px;  /* يمكنك تعديل الطول حسب الحاجة */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  height: 100px;
 }
 
-/* الحاوية الداخلية للنتيجة */
 #result {
-  text-align: center;  /* توسيط النص داخل الحاوية */
+  text-align: center;
   font-size: 20px;
-  margin: 20px 0;  /* مسافة حول النتيجة */
-}
-
-/* زر التحويل */
-button {
-  width: 150px;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-button:hover {
-  background-color: #218838;
+  margin: 20px 0;
 }
 
 /* إعدادات خاصة بالهاتف */
 @media (max-width: 600px) {
   h1 {
-    font-size: 36px;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
   }
 
   input {
-    width: 250px;
+    font-size: 14px;
   }
 
   button {
-    width: 120px;
+    font-size: 16px;
+    padding: 8px;
   }
 
   nav ul li a img {
-    width: 24px; /* تصغير أكثر عند استخدام الهاتف */
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -158,17 +150,13 @@ footer {
   position: absolute;
   bottom: 10px;
   left: 10px;
-}
-
-#credit {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 /* الوضع المظلم */
 body.dark-mode {
-  background-image: url('dark.jpg'); /* تأكد من أن لديك هذه الصورة، أو قم باستبدالها */
-  background-color: #121212; /* لون خلفية افتراضي في حال عدم توفر الصورة */
+  background-image: url('dark.jpg');
+  background-color: #121212;
   color: #ddd;
 }
 
