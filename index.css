@@ -82,6 +82,7 @@ input {
   margin-bottom: 15px;
   font-size: 16px;
   text-align: center;
+  font-family: 'Cairo', sans-serif; /* تطبيق خط Cairo هنا */
 }
 
 button {
@@ -94,6 +95,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+  font-family: 'Cairo', sans-serif; /* تطبيق خط Cairo هنا */
 }
 
 button:hover {
