@@ -1,0 +1,191 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-image: url('light.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* الهيدر وقائمة التنقل */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* رفع النص */
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* العنوان الرئيسي */
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* صندوق التحويل */
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center; /* توسيط النص داخل الحقل */
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* إعدادات الصور */
+nav ul li a img {
+  width: 32px; /* تقليص حجم الصور */
+  height: 32px;
+  vertical-align: middle; /* محاذاة الصور مع النص */
+}
+
+/* إعداد Flexbox للحاوية الرئيسية */
+.result-container {
+  display: flex;
+  justify-content: center;  /* محاذاة أفقيًا */
+  align-items: center;  /* محاذاة عموديًا */
+  width: 100%;  /* تأكيد أن الحاوية تأخذ العرض بالكامل */
+  margin-top: 20px;  /* مسافة بين حقل النص والنتيجة */
+  height: 100px;  /* يمكنك تعديل الطول حسب الحاجة */
+}
+
+/* الحاوية الداخلية للنتيجة */
+#result {
+  text-align: center;  /* توسيط النص داخل الحاوية */
+  font-size: 20px;
+  margin: 20px 0;  /* مسافة حول النتيجة */
+}
+
+/* زر التحويل */
+button {
+  width: 150px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* إعدادات خاصة بالهاتف */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  input {
+    width: 250px;
+  }
+
+  button {
+    width: 120px;
+  }
+
+  nav ul li a img {
+    width: 24px; /* تصغير أكثر عند استخدام الهاتف */
+    height: 24px;
+  }
+}
+
+/* إعدادات الفوتر */
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#credit {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* الوضع المظلم */
+body.dark-mode {
+  background-image: url('dark.jpg'); /* تأكد من أن لديك هذه الصورة، أو قم باستبدالها */
+  background-color: #121212; /* لون خلفية افتراضي في حال عدم توفر الصورة */
+  color: #ddd;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: #ddd;
+}
+
+body.dark-mode button {
+  background-color: #555;
+  color: white;
+}
+
+body.dark-mode nav ul li a {
+  color: #ddd;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #FFD700;
+}
