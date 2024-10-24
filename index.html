@@ -1,94 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حساباتي في السوشيال ميديا</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .social-media-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .social-media-links ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-media-links ul li {
-            display: inline;
-        }
-
-        .social-media-links ul li a {
-            text-decoration: none;
-        }
-
-        .social-media-links ul li img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s;
-        }
-
-        .social-media-links ul li img:hover {
-            transform: scale(1.2);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        /* قواعد CSS لجعل الصفحة متجاوبة */
-        @media (max-width: 768px) {
-            .social-media-links ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .social-media-links ul li img {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-
-            .social-media-links ul li img {
-                width: 35px;
-                height: 35px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محول الوقت</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="languageToggle">English</a></li>
+        <li><a href="#" id="darkModeToggle">الوضع المظلم</a></li>
+        <li><span>حساباتي في السوشال ميديا:</span></li>
+        <li><a href="https://www.tiktok.com/@majeed.png?_t=8qhQQgkMYw3&_r=1"><img src="tiktok.png" alt="TikTok"></a></li>
+        <li><a href="https://youtube.com/@abdulmajeed.al-thuwaini?si=EZP5tDOx9q4HHHkZ"><img src="youtube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.instagram.com/majeed.png/profilecard/?igsh=cXp4MnYyNTRxN3Jz"><img src="instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://m.facebook.com/61559841066210/"><img src="facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://snapchat.com/t/wWjVUi5o"><img src="snapchat.png" alt="Snapchat"></a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="social-media-links">
-        <h1>حساباتي في السوشيال ميديا</h1>
-        <ul>
-            <li><a href="https://www.instagram.com/majeed.png/profilecard/?igsh=cXp4MnYyNTRxN3Jz"><img src="instagram.png" alt="Instagram"></a></li>
-            <li><a href="https://www.tiktok.com/@majeed"><img src="tiktok.png" alt="TikTok"></a></li>
-            <li><a href="https://twitter.com/majeed"><img src="twitter.png" alt="Twitter"></a></li>
-        </ul>
+  <main>
+    <h1>محول الوقت</h1>
+    <p>تحويل الوقت من نظام 24 ساعة إلى 12 ساعة والعكس</p>
+    
+    <div class="converter">
+      <input type="text" placeholder="ادخل الوقت (مثال: 14:30)">
+      <button id="convertButton">تحويل</button>
     </div>
 
+    <!-- عنصر لعرض النتيجة -->
+    <div id="result"></div>
+  </main>
+
+  <footer>
+    <p>من: عبدالمجيد الثويني</p>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
