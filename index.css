@@ -1,3 +1,6 @@
+/* استيراد خط Cairo */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
 /* إعدادات عامة */
 * {
   margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif; /* تطبيق خط Cairo هنا */
   background-image: url('light.jpg');
   background-size: cover;
   background-position: center;
