@@ -16,7 +16,7 @@ languageToggle.addEventListener('click', () => {
   if (currentLang === 'ar') {
     document.documentElement.lang = 'en';
     document.querySelector('h1').textContent = 'Time Converter';
-    document.querySelector('p').textContent = 'Convert time between 24-hour and 12-hour systems';
+    document.querySelector('p').textContent = 'Convert time from 24-hour to 12-hour systems';
     document.querySelector('input').placeholder = 'Enter time (e.g., 14:30)';
     document.querySelector('button').textContent = 'Convert';
     document.querySelector('#languageToggle').textContent = 'العربية';
@@ -26,7 +26,7 @@ languageToggle.addEventListener('click', () => {
   } else {
     document.documentElement.lang = 'ar';
     document.querySelector('h1').textContent = 'محول الوقت';
-    document.querySelector('p').textContent = 'تحويل الوقت من نظام 24 ساعة إلى 12 ساعة والعكس';
+    document.querySelector('p').textContent = 'تحويل الوقت من نظام 24 ساعة إلى 12 ساعة ';
     document.querySelector('input').placeholder = 'ادخل الوقت (مثال: 14:30)';
     document.querySelector('button').textContent = 'تحويل';
     document.querySelector('#languageToggle').textContent = 'English';
